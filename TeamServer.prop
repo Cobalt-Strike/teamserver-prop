@@ -1,5 +1,6 @@
 #Cobalt Strike Team Server Properties
-#Fri May 07 12:00:00 CDT 2021
+#Fri September 16 12:00:00 CDT 2022
+
 # ------------------------------------------------
 # Validation for screenshot messages from beacons
 # ------------------------------------------------
@@ -7,6 +8,7 @@
 # limits.screenshot_data_maxlen=4194304
 # limits.screenshot_user_maxlen=1024
 # limits.screenshot_title_maxlen=1024
+
 # Stop writing screenshot data when Disk Usage reaches XX%
 # Example: Off
 #          "limits.screenshot_diskused_percent=0"
@@ -14,6 +16,7 @@
 #          "limits.screenshot_diskused_percent=95"
 # Default:
 # limits.screenshot_diskused_percent=95
+
 # ------------------------------------------------
 # Validation for keystroke messages from beacons
 # ------------------------------------------------
@@ -21,6 +24,7 @@
 # limits.keystrokes_data_maxlen=8192
 # limits.keystrokes_user_maxlen=1024
 # limits.keystrokes_title_maxlen=1024
+
 # Stop writing keystroke data when Disk Usage reaches XX%
 # Example: Off
 #          "limits.keystrokes_diskused_percent=0"
@@ -28,3 +32,29 @@
 #          "limits.keystrokes_diskused_percent=95"
 # Default:
 # limits.keystrokes_diskused_percent=95
+
+# ------------------------------------------------
+# Add a limit to the number of beacons allowed (spam protection)
+# Setting the value to 0 (or less) will disable this function.
+#   limits.beacons_max - (500) maximum number of beacon allowed
+# ------------------------------------------------
+# limits.beacons_max=500
+
+# ------------------------------------------------
+# Threshold rate for adding new beacons (spam protection)...
+# Add a limit to the number of new beacons added within a specified time period.
+# When the limit is exceeded, disable accepting new beacons for the disable duration.
+# Setting any value to 0 (or less) will disable this function.
+#   limits.beacon_rate_period - (30000) milliseconds of the time period
+#   limits.beacon_rate_maxperperiod - (50) new beacons allowed during time period
+#   limits.beacon_rate_disableduration - (600000) milliseconds to disable when threshold is exceeded
+# ------------------------------------------------
+# limits.beacon_rate_period=30000
+# limits.beacon_rate_maxperperiod=50
+# limits.beacon_rate_disableduration=600000
+
+# ------------------------------------------------
+# Perform XSS Validation on select new beacon metadata (spam protection)
+#   default = true
+# ------------------------------------------------
+# limits.beacons_xssvalidated=true
