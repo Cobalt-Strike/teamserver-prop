@@ -1,5 +1,5 @@
 #Cobalt Strike Team Server Properties
-#Fri September 16 12:00:00 CDT 2022
+#Tue Sept 19 12:00:00 CDT 2023
 
 # ------------------------------------------------
 # Validation for screenshot messages from beacons
@@ -58,3 +58,21 @@
 #   default = true
 # ------------------------------------------------
 # limits.beacons_xssvalidated=true
+
+# ------------------------------------------------
+# Callback timeout limits
+#    callback_max_timeout controls the number of milliseconds a request is
+#    kept in the pending queue to wait for the initial data response.
+#    The default is 86400000 milliseconds (24 hours)
+#
+#    callback_keep_timeout controls the number of milliseconds a request is
+#    kept in the pending queue to wait for subsequent data responses.  If
+#    using callbacks in long running jobs/tasks you may need to adjust
+#    this setting based on how often data will be received, which needs
+#    to account for beacon's sleep time and how often the job/task sends
+#    data.
+#    The default is 3600000 milliseconds (1 hour)
+# ------------------------------------------------
+# limits.callback_max_timeout=86400000
+# limits.callback_keep_timeout=3600000
+
