@@ -1,5 +1,5 @@
 #Cobalt Strike Team Server Properties
-#Tue Sept 19 12:00:00 CDT 2023
+#July 16, 2024
 
 # ------------------------------------------------
 # Validation for screenshot messages from beacons
@@ -75,4 +75,45 @@
 # ------------------------------------------------
 # limits.callback_max_timeout=86400000
 # limits.callback_keep_timeout=3600000
+
+# ------------------------------------------------
+# The "logfile.*" properties below impact the formatting of
+# timestamps in the following log files:
+#   - .../logs/[date]/events.log
+#   - .../logs/[date]/downloads.log
+#   - .../logs/[date]/weblog_[port].log
+#   - .../logs/[date]/webkeystrokes.log
+#   - .../logs/[date]/phishes/campaign_[id].log
+#   - .../logs/[date]/[target-ip]/screenshots.log
+#   - .../logs/[date]/[target-ip]/beacon_[bid].log
+#   - .../logs/[date]/[target-ip]/keystrokes/keystrokes_[bid].[desktop-id].txt
+# ------------------------------------------------
+# Override the timestamp formatting pattern used for logfiles.
+# The pattern should be compatible with the Java's "java.text.SimpleDateFormat" class.
+# See: https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html
+# ------------------------------------------------
+#   Default:  "MM/dd HH:mm:ss zzz"
+#   Examples:
+#        logfile.timestamp.pattern=MM/dd/yy HH:mm:ss zzz
+#        logfile.timestamp.pattern=yyyy-MM-dd HH:mm:ss zzz
+# ------------------------------------------------
+# logfile.timestamp.pattern=yyyy-MM-dd HH:mm:ss zzz
+
+# ------------------------------------------------
+# Override the timezone used for the log files mentioned above.
+# The timezone name should be compatible with the Java's "java.util.TimeZone" class.
+# See: https://docs.oracle.com/javase/8/docs/api/java/util/TimeZone.html
+# NOTE: An invalid timezone override results in GMT.
+# ------------------------------------------------
+#   Default:  UTC
+#   Special Value: "*default" [uses the value supplied by the team server JRE]
+#   Examples:
+#             logfile.timezone=*default
+#             logfile.timezone=America/Los_Angeles   or PST
+#             logfile.timezone=America/Chicago       or CST
+#             logfile.timezone=Europe/London
+#             logfile.timezone=Pacific/Noumea
+# ------------------------------------------------
+# logfile.timezone=America/Los_Angeles
+# logfile.timezone=*default
 
