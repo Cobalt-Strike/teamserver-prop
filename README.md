@@ -35,3 +35,12 @@ When the limit is exceeded, disable accepting new beacons for the disable durati
 Perform XSS Validation on select new beacon metadata (spam protection).
 - **limits.beacons_xssvalidated** (default is *true*)
     - **limits.beacons_xssvalidated=false** disables this setting
+
+Override the timestamp formatting pattern used for logfiles.
+- **logfile.timestamp.pattern** (default is *MM/dd HH:mm:ss zzz*)
+    - **logfile.timestamp.pattern=yyyy-MM-dd HH:mm:ss zzz**
+
+Override the timezone used for the log files
+- **logfile.timezone** (default is *UTC*)
+    - **logfile.timezone=America/Los_Angeles**
+
