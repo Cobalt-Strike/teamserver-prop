@@ -40,10 +40,14 @@ Override the timestamp formatting pattern used for logfiles.
 Override the timezone used for the log files
 - ```logfile.timezone``` (default is *UTC*)
     - ```logfile.timezone=America/Los_Angeles```
+
+Limit manually added Payload Store files.
+- ```payloadstore.manual_upload_max_size``` is the maximum size, in bytes, for manually added Payload Store files (default is *15728640*, or 15 MiB)
+    - ```payloadstore.manual_upload_max_size=15728640```
  
 ## Release Notes
 
 - The Cobalt Strike 4.4 release introduced an optional file, **TeamServer.prop**, that contains a number of  parameters that can be used to customize the settings used to validate screenshot and keylog callback data. 
 - The Cobalt Strike 4.7.1 release introduced new settings for the maximum number of beacons, thresholds for new beacons and beacon XSS validation.
 - The Cobalt Strike 4.11 release introduced new settings for timestamp formatting and timezone configuration. 
-
+- The Cobalt Strike 4.13 release introduced a new setting for the maximum manually added Payload Store file size.

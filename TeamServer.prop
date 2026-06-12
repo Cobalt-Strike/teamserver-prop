@@ -117,3 +117,9 @@
 # logfile.timezone=America/Los_Angeles
 # logfile.timezone=*default
 
+# ------------------------------------------------
+# Client-side limit for manually added Payload Store files.
+# Value is in bytes.
+# Default: 15728640 (15 MiB)
+# ------------------------------------------------
+# payloadstore.manual_upload_max_size=15728640
